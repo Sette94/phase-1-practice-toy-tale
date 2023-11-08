@@ -82,6 +82,7 @@ function renderToy(toys) {
 
   toyLikeButton.addEventListener('click', (e) => {
     e.preventDefault()
+    console.log(toys)
     toyLikes += 1
 
     let likesObj = {
