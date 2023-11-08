@@ -38,11 +38,10 @@ toyFormContainer.addEventListener('submit', (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(postData),
-  }).then(res => {
-    if (res.ok) {
-      renderToy(postData)
-    }
-  });
+  }).then(res => res.json())
+    .then(data => {
+      renderToy(data)
+    })
 
 
 })
